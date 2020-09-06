@@ -9,7 +9,7 @@ import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiBuilderProjectSubmission {
-    private static final String BASE_URL = "https://docs.google.com/";
+    private static final String BASE_URL = "https://docs.google.com/forms/d/e/";
     private static ApiBuilderProjectSubmission instance;
     private Retrofit retrofit;
 

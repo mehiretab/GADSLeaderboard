@@ -63,7 +63,10 @@ public class ProjectSubmissionActivity extends AppCompatActivity {
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(aVoid -> showDialog(SubmitStatusDialog.Status.SUCCESS),
-                            throwable -> showDialog(SubmitStatusDialog.Status.FAIL)));
+                            throwable -> {
+                                throwable.printStackTrace();
+                                showDialog(SubmitStatusDialog.Status.FAIL);
+                            }));
         } catch (NullPointerException ex) {
             Toast.makeText(this, "Please insert all inputs", Toast.LENGTH_SHORT).show();
         }
