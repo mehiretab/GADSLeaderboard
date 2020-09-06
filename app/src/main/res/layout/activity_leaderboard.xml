@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".LeaderBoardActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/leader_board_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LEADERBOARD"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/leader_board_submit_btn"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="10dp"
+                android:text="Submit"
+                android:textAllCaps="false"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/leader_board_tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/leader_board_toolbar"
+        app:tabBackground="@color/colorPrimary"
+        app:tabIndicatorColor="@android:color/white"
+        app:tabIndicatorHeight="5dp"
+        app:tabTextAppearance="@style/TabTextAppearance"
+        app:tabTextColor="@android:color/white"
+        tools:layout_editor_absoluteX="204dp">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/leader_board_learning_leaders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/learning_leaders" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/leader_board_skill_iq_leaders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/skill_iq_leaders" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/leader_board_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leader_board_tabLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GADSLeaderboard</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
+    <string name="learning_leaders">Learning Leaders</string>
+    <string name="skill_iq_leaders">Skill IQ leaders</string>
+</resources>
