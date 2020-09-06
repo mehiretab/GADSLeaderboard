@@ -1,6 +1,7 @@
 package com.mehiretab.gadsleaderboard;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -66,6 +67,10 @@ public class ProjectSubmissionActivity extends AppCompatActivity {
         } catch (NullPointerException ex) {
             Toast.makeText(this, "Please insert all inputs", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void finishActivity(View view) {
+        finish();
     }
 
     @Override
